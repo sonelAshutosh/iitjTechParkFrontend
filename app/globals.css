@@ -1,26 +1,43 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   IIT JODHPUR TECHNOLOGY PARK - DESIGN SYSTEM
+   ============================================
+   
+   Theme: Sandstone/Desert + Material Design 3 + Glassmorphism
+   
+   Color Philosophy:
+   - Warm, earthy tones inspired by Rajasthani sandstone architecture
+   - High contrast for readability
+   - Tonal surfaces for M3 design language
+============================================== */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+
+  /* Custom Theme Colors - Available as Tailwind classes */
+  --color-sandstone: var(--sandstone);
+  --color-sandstone-light: var(--sandstone-light);
+  --color-sandstone-dark: var(--sandstone-dark);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-maroon: var(--maroon);
+  --color-maroon-light: var(--maroon-light);
+  --color-maroon-dark: var(--maroon-dark);
+  --color-umber: var(--umber);
+  --color-umber-light: var(--umber-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-terracotta: var(--terracotta);
+
+  /* Core Colors */
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -37,89 +54,485 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
+  /* Radius System */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
-  --radius-4xl: calc(var(--radius) + 16px);
 }
 
+/* ============================================
+   LIGHT MODE - SANDSTONE THEME
+   High contrast for readability
+   ============================================ */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.75rem;
+
+  /* ===== Core Semantic Colors ===== */
+  /* Background & Foreground - High Contrast */
+  --background: #faf7f2;
+  --foreground: #1c1410;
+
+  /* Card Surfaces */
+  --card: #ffffff;
+  --card-foreground: #1c1410;
+
+  /* Popover Surfaces */
+  --popover: #ffffff;
+  --popover-foreground: #1c1410;
+
+  /* Primary - Deep Maroon (IIT Jodhpur Identity) */
+  --primary: #7b2d3e;
+  --primary-foreground: #ffffff;
+
+  /* Secondary - Warm Sandstone */
+  --secondary: #f0e6d8;
+  --secondary-foreground: #1c1410;
+
+  /* Muted - Light Sand */
+  --muted: #f5ede2;
+  --muted-foreground: #5c4d42;
+
+  /* Accent - Thar Gold */
+  --accent: #c9a227;
+  --accent-foreground: #1c1410;
+
+  /* Destructive */
+  --destructive: #b44040;
+
+  /* Border & Input */
+  --border: #e5ddd0;
+  --input: #e5ddd0;
+  --ring: #c9a227;
+
+  /* ===== Custom Theme Palette ===== */
+  /* Sandstone Tones */
+  --sandstone: #c4a77d;
+  --sandstone-light: #e8ded0;
+  --sandstone-dark: #a68b5b;
+
+  /* Gold Accents */
+  --gold: #c9a227;
+  --gold-light: #e0c05a;
+  --gold-dark: #9a7b1a;
+
+  /* Maroon (Primary Brand) */
+  --maroon: #7b2d3e;
+  --maroon-light: #9b4555;
+  --maroon-dark: #5a1f2d;
+
+  /* Umber (Dark Surfaces) */
+  --umber: #2c1810;
+  --umber-light: #4a3428;
+
+  /* Cream (Light Surfaces) */
+  --cream: #faf7f2;
+  --cream-dark: #f0e6d8;
+
+  /* Accent Colors */
+  --terracotta: #c17f59;
+
+  /* ===== Layout Spacing ===== */
+  --spacing-container: 1.5rem;
+  --spacing-section: 5rem;
+  --max-width-content: 72rem;
 }
 
+/* ============================================
+   DARK MODE - DESERT NIGHT THEME
+   ============================================ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Background & Foreground */
+  --background: #0f0a07;
+  --foreground: #f5ede5;
+
+  /* Card Surfaces */
+  --card: #1a120d;
+  --card-foreground: #f5ede5;
+
+  /* Popover */
+  --popover: #1a120d;
+  --popover-foreground: #f5ede5;
+
+  /* Primary - Gold (Switch for dark mode visibility) */
+  --primary: #c9a227;
+  --primary-foreground: #0f0a07;
+
+  /* Secondary */
+  --secondary: #2a1e18;
+  --secondary-foreground: #f5ede5;
+
+  /* Muted */
+  --muted: #1a120d;
+  --muted-foreground: #a89888;
+
+  /* Accent */
+  --accent: #c4a77d;
+  --accent-foreground: #0f0a07;
+
+  /* Destructive */
+  --destructive: #d45050;
+
+  /* Border & Input */
+  --border: #2a1e18;
+  --input: #1a120d;
+  --ring: #c9a227;
+
+  /* Custom Colors - Dark Mode Adjustments */
+  --sandstone: #b89b70;
+  --sandstone-light: #c4a77d;
+  --sandstone-dark: #8a7352;
+
+  --gold: #d4ad2b;
+  --gold-light: #e8c45a;
+  --gold-dark: #a6851f;
+
+  --maroon: #9b4555;
+  --maroon-light: #b5606f;
+  --maroon-dark: #7b2d3e;
+
+  --umber: #0f0a07;
+  --umber-light: #1a120d;
+
+  --cream: #f5ede5;
+  --cream-dark: #e8ded0;
+
+  --terracotta: #d4906a;
 }
 
+/* ============================================
+   BASE STYLES
+   ============================================ */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  /* Selection Color */
+  ::selection {
+    background-color: rgba(201, 162, 39, 0.3);
+    color: #1c1410;
+  }
+
+  .dark ::selection {
+    background-color: rgba(201, 162, 39, 0.4);
+    color: #0f0a07;
+  }
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+@layer utilities {
+  /* Consistent Container Padding */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Container Sizes with Consistent Max-Width */
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-full {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .section-padding-lg {
+    @apply py-16 md:py-20 lg:py-28;
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY UTILITIES
+   ============================================ */
+@layer utilities {
+  .heading-display {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground;
+  }
+
+  .heading-1 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground;
+  }
+
+  .heading-2 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-foreground;
+  }
+
+  .heading-3 {
+    @apply text-lg sm:text-xl md:text-2xl font-semibold text-foreground;
+  }
+
+  .heading-4 {
+    @apply text-base sm:text-lg md:text-xl font-medium text-foreground;
+  }
+
+  .body-large {
+    @apply text-base sm:text-lg leading-relaxed text-foreground/90;
+  }
+
+  .body-default {
+    @apply text-sm sm:text-base leading-relaxed text-foreground/85;
+  }
+
+  .body-small {
+    @apply text-xs sm:text-sm leading-relaxed text-foreground/80;
+  }
+
+  .caption {
+    @apply text-xs uppercase tracking-widest font-medium text-muted-foreground;
+  }
+
+  /* M3 Label Styles */
+  .label-large {
+    @apply text-sm font-semibold text-foreground;
+  }
+
+  .label-medium {
+    @apply text-xs font-medium uppercase tracking-wider text-muted-foreground;
+  }
+
+  .label-small {
+    @apply text-[10px] font-medium uppercase tracking-widest text-muted-foreground;
+  }
+}
+
+/* ============================================
+   GRADIENT UTILITIES
+   ============================================ */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      #c9a227 0%,
+      #c4a77d 50%,
+      #7b2d3e 100%
+    );
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      #e0c05a 0%,
+      #c9a227 50%,
+      #9a7b1a 100%
+    );
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #2c1810 0%, #3d261c 50%, #2c1810 100%);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, #e0c05a 0%, #c9a227 50%, #9a7b1a 100%);
+  }
+
+  .bg-gradient-sandstone {
+    background: linear-gradient(180deg, #faf7f2 0%, #f0e6d8 100%);
+  }
+}
+
+/* ============================================
+   GLASSMORPHISM UTILITIES
+   ============================================ */
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl;
+    background: rgba(250, 247, 242, 0.75);
+    border: 1px solid rgba(196, 167, 125, 0.15);
+  }
+
+  .dark .glass {
+    background: rgba(26, 18, 13, 0.75);
+    border: 1px solid rgba(196, 167, 125, 0.1);
+  }
+
+  .glass-subtle {
+    @apply backdrop-blur-lg;
+    background: rgba(250, 247, 242, 0.5);
+    border: 1px solid rgba(196, 167, 125, 0.1);
+  }
+
+  .dark .glass-subtle {
+    background: rgba(26, 18, 13, 0.5);
+    border: 1px solid rgba(196, 167, 125, 0.08);
+  }
+}
+
+/* ============================================
+   M3 SURFACE UTILITIES
+   ============================================ */
+@layer utilities {
+  /* M3 Tonal Surfaces */
+  .surface-1 {
+    @apply bg-card;
+  }
+
+  .surface-2 {
+    @apply bg-secondary;
+  }
+
+  .surface-3 {
+    @apply bg-muted;
+  }
+
+  /* M3 Interactive States */
+  .interactive-surface {
+    @apply transition-all duration-200;
+  }
+
+  .interactive-surface:hover {
+    @apply bg-secondary;
+  }
+
+  /* M3 Elevation */
+  .elevation-1 {
+    box-shadow: 0 1px 2px rgba(28, 20, 16, 0.08);
+  }
+
+  .elevation-2 {
+    box-shadow: 0 2px 6px rgba(28, 20, 16, 0.1);
+  }
+
+  .elevation-3 {
+    box-shadow: 0 4px 12px rgba(28, 20, 16, 0.12);
+  }
+
+  .dark .elevation-1 {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .elevation-2 {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .dark .elevation-3 {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+@layer utilities {
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(201, 162, 39, 0.25),
+      0 0 40px rgba(201, 162, 39, 0.15);
+  }
+
+  .glow-gold-sm {
+    box-shadow: 0 0 10px rgba(201, 162, 39, 0.2),
+      0 0 20px rgba(201, 162, 39, 0.1);
+  }
+
+  .glow-maroon {
+    box-shadow: 0 0 20px rgba(123, 45, 62, 0.25),
+      0 0 40px rgba(123, 45, 62, 0.15);
+  }
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES
+   ============================================ */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0e6d8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a120d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(196, 167, 125, 0.5);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(196, 167, 125, 0.7);
+  background-clip: padding-box;
+}
+
+/* ============================================
+   FOCUS STATES
+   ============================================ */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2;
+    outline-color: #c9a227;
   }
 }
