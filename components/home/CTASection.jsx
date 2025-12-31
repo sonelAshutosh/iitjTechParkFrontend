@@ -20,21 +20,18 @@ export default function CTASection() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Background Image Layer - Covers both CTA and Partners */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/images/hero-section-3.png')`,
-          }}
-        />
-        {/* Progressive gradient overlay - darker, better contrast for text */}
-        <div className="absolute inset-0 bg-gradient-to-b from-umber/70 via-umber/80 via-40% to-secondary dark:from-black/70 dark:via-black/85 dark:via-40% dark:to-secondary" />
-      </div>
+      {/* Background Image Layer with CSS Parallax */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/images/hero-section-3.png')`,
+          backgroundAttachment: 'fixed',
+        }}
+      />
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gold/10 rounded-full blur-[150px] z-[1]" />
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-maroon/10 rounded-full blur-[150px] z-[1]" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gold/10 rounded-full blur-[150px] z-1" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-maroon/10 rounded-full blur-[150px] z-1" />
 
       {/* CTA Content */}
       <div className="relative z-10 py-24">
@@ -46,10 +43,10 @@ export default function CTASection() {
             <Building className="w-4 h-4 mr-2" />
             World-Class Infrastructure
           </Badge>
-          <h2 className="heading-2 text-white mb-6">
+          <h2 className="heading-2 text-white! mb-6">
             Workspace Solutions for Every Stage of Innovation
           </h2>
-          <p className="body-large text-white/80 mb-10 max-w-2xl mx-auto">
+          <p className="body-large text-white/80! mb-10 max-w-2xl mx-auto">
             From co-working desks for early-stage startups to dedicated R&D labs
             for established enterprises—find the perfect space to bring your
             ideas to life.
@@ -69,7 +66,7 @@ export default function CTASection() {
               asChild
               variant="outline"
               size="lg"
-              className="h-12 px-8 border-white/20 text-white hover:bg-white/10 rounded-full"
+              className="h-12 px-8 border-white/30 text-black dark:text-white hover:bg-white/10 hover:text-white dark:hover:bg-black/10 rounded-full"
             >
               <Link href="/contact">Schedule a Visit</Link>
             </Button>
@@ -77,28 +74,65 @@ export default function CTASection() {
         </div>
       </div>
 
-      {/* Partners Section - Integrated */}
+      {/* Partners Section - Marquee Style */}
       <div className="relative z-10 py-16">
         <div className="px-4 sm:px-6 lg:px-0 lg:max-w-6xl lg:mx-auto">
           <div className="text-center mb-10">
-            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+            <p className="text-sm font-medium text-white/70 uppercase tracking-wider">
               Trusted by Leading Organizations
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="aspect-3/2 flex items-center justify-center rounded-xl bg-card/90 backdrop-blur-sm border border-border hover:border-primary/40 hover:bg-card transition-all duration-300 hover:elevation-1 p-6"
-              >
-                <span className="text-sm font-semibold text-foreground/80">
-                  {partner}
-                </span>
-              </div>
-            ))}
+
+          {/* Marquee Container */}
+          <div className="relative overflow-hidden">
+            {/* Marquee Animation */}
+            <div className="flex gap-8 animate-marquee">
+              {/* First set of partners */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-card/90 backdrop-blur-sm border border-border hover:border-primary/40 hover:bg-card transition-all duration-300 hover:elevation-1 p-6"
+                >
+                  <span className="text-sm font-semibold text-foreground/80 whitespace-nowrap">
+                    {partner}
+                  </span>
+                </div>
+              ))}
+              {/* Duplicate for seamless loop */}
+              {partners.map((partner, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="shrink-0 w-48 h-28 flex items-center justify-center rounded-xl bg-card/90 backdrop-blur-sm border border-border hover:border-primary/40 hover:bg-card transition-all duration-300 hover:elevation-1 p-6"
+                >
+                  <span className="text-sm font-semibold text-foreground/80 whitespace-nowrap">
+                    {partner}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Marquee Animation Styles */}
+      <style jsx>{`
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
+        }
+
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   )
 }

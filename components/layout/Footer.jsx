@@ -144,8 +144,13 @@ export default function Footer() {
                     </div>
                   </a>
 
-                  <div className="flex items-start gap-3 p-3 rounded-xl bg-secondary">
-                    <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                  <a
+                    href="https://maps.app.goo.gl/oG3Erm3TvQxEcxyeA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 p-3 rounded-xl bg-secondary hover:bg-muted transition-colors group cursor-pointer"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
@@ -158,7 +163,7 @@ export default function Footer() {
                         Karwad, Jodhpur 342030
                       </address>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
 
