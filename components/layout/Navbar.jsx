@@ -112,6 +112,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isDark, setIsDark] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [closeTimeout, setCloseTimeout] = useState(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -135,6 +136,21 @@ export default function Navbar() {
     setIsDark(!isDark)
     document.documentElement.classList.toggle('dark')
     localStorage.setItem('theme', isDark ? 'light' : 'dark')
+  }
+
+  const handleMouseEnter = (itemTitle) => {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout)
+      setCloseTimeout(null)
+    }
+    setActiveDropdown(itemTitle)
+  }
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setActiveDropdown(null)
+    }, 300) // 300ms delay before closing
+    setCloseTimeout(timeout)
   }
 
   useEffect(() => {
@@ -201,9 +217,9 @@ export default function Navbar() {
                     key={item.title}
                     className="navbar-item relative"
                     onMouseEnter={() =>
-                      item.dropdown && setActiveDropdown(item.title)
+                      item.dropdown && handleMouseEnter(item.title)
                     }
-                    onMouseLeave={() => setActiveDropdown(null)}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <Link
                       href={item.href}

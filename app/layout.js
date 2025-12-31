@@ -1,18 +1,14 @@
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/layout/Navbar'
+import Footer from '@/components/layout/Footer'
 
-// Primary font for body text - clean and professional
-const inter = Inter({
-  variable: '--font-inter',
+// Montserrat font - elegant and modern
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin'],
   display: 'swap',
-})
-
-// Display font for headings - modern and tech-forward
-const spaceGrotesk = Space_Grotesk({
-  variable: '--font-space-grotesk',
-  subsets: ['latin'],
-  display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
 })
 
 export const metadata = {
@@ -90,10 +86,10 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body
-        className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
-      >
-        {children}
+      <body className={`${montserrat.variable} font-sans antialiased`}>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
