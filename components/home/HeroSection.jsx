@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -73,28 +74,48 @@ export default function HeroSection() {
       <div className="relative z-10 px-4 sm:px-6 lg:px-0 lg:max-w-6xl lg:mx-auto w-full py-20">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="hero-badge mb-6 inline-block">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="hero-badge mb-6 inline-block"
+          >
             <Badge className="px-4 py-2 text-sm bg-primary/10 text-primary border-primary/20 hover:bg-primary/15">
               <Sparkles className="w-4 h-4 mr-2" />
               Rajasthan's Premier Innovation Hub
             </Badge>
-          </div>
+          </motion.div>
 
           {/* Title */}
-          <h1 className="hero-title heading-display mb-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="hero-title heading-display mb-6"
+          >
             Where <span className="text-gradient-gold">Innovation</span> Meets{' '}
             <span className="text-gradient">Excellence</span>
-          </h1>
+          </motion.h1>
 
           {/* Subtitle */}
-          <p className="hero-subtitle body-large text-foreground/75 pb-2 mb-10 max-w-3xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="hero-subtitle body-large text-foreground/75 pb-2 mb-10 max-w-3xl mx-auto"
+          >
             IIT Jodhpur Technology Park - A world-class ecosystem fostering
             cutting-edge research, deep-tech startups, and transformative
             industry-academia collaborations in the heart of Rajasthan.
-          </p>
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <Button
               asChild
               size="lg"
@@ -116,7 +137,7 @@ export default function HeroSection() {
                 Watch Video Tour
               </Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
 

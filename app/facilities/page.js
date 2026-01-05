@@ -139,27 +139,40 @@ export default function FacilitiesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-cream via-cream-dark to-sandstone-light dark:from-umber dark:via-umber-light dark:to-umber">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream via-cream-dark to-sandstone-light dark:from-umber dark:via-umber-light dark:to-umber">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30 dark:opacity-40"
+            style={{
+              backgroundImage: `url('/images/hero-section.png')`,
+            }}
+          />
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-umber/70 via-umber/50 to-umber/70 dark:from-black/60 dark:via-black/40 dark:to-black/60" />
+        </div>
+
+        {/* Background Pattern - On top of image */}
         <div
-          className="absolute inset-0 opacity-[0.15]"
+          className="absolute inset-0 opacity-[0.2] z-1"
           style={{
-            backgroundImage: `linear-gradient(rgba(201, 162, 39, 0.3) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(201, 162, 39, 0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(201, 162, 39, 0.4) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(201, 162, 39, 0.4) 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
           }}
         />
 
-        <div className="relative px-4 sm:px-6 lg:px-0 lg:max-w-6xl lg:mx-auto">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-0 lg:max-w-6xl lg:mx-auto">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="mb-6 px-4 py-2">
               <Sparkles className="w-4 h-4 mr-2" />
               World-Class Infrastructure
             </Badge>
-            <h1 className="heading-display mb-6">
+            <h1 className="heading-display mb-6 text-white">
               Facilities Built for{' '}
               <span className="text-gradient">Innovation</span>
             </h1>
-            <p className="body-large text-foreground/75 mb-8 text-justify">
+            <p className="body-large text-white/90 mb-8 text-justify">
               From cutting-edge research labs to collaborative co-working
               spaces, our infrastructure is designed to support every stage of
               your innovation journey. Experience facilities that combine
