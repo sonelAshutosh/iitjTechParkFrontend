@@ -25,14 +25,14 @@ const visionMission = [
     title: 'Our Vision',
     description:
       'To establish IIT Jodhpur Technology Park as a globally recognized innovation ecosystem that bridges the gap between academia and industry, driving technological advancement and economic growth in Rajasthan and beyond.',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#6610f2] to-[#469b7c]',
   },
   {
     icon: Target,
     title: 'Our Mission',
     description:
       'To foster cutting-edge research, nurture deep-tech startups, and facilitate meaningful industry-academia collaborations that address real-world challenges and create sustainable impact.',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#903f54] to-[#B85200]',
   },
 ]
 

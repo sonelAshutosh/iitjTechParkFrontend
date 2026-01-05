@@ -7,12 +7,12 @@
    IIT JODHPUR TECHNOLOGY PARK - DESIGN SYSTEM
    ============================================
    
-   Theme: Sandstone/Desert + Material Design 3 + Glassmorphism
+   Official IIT Jodhpur Brand Colors + Material Design 3
    
    Color Philosophy:
-   - Warm, earthy tones inspired by Rajasthani sandstone architecture
+   - IIT Jodhpur official colors: Rose-Maroon (#903f54), Orange (#B85200), Green (#469b7c)
+   - Professional academic aesthetic with vibrant accents
    - High contrast for readability
-   - Tonal surfaces for M3 design language
 ============================================== */
 
 @theme inline {
@@ -72,57 +72,86 @@
   --radius: 0.75rem;
 
   /* ===== Core Semantic Colors ===== */
-  /* Background & Foreground - High Contrast */
-  --background: #faf7f2;
-  --foreground: #1c1410;
+  /* Background & Foreground - Clean Academic White */
+  --background: #ffffff;
+  --foreground: #212529;
 
   /* Card Surfaces */
   --card: #ffffff;
-  --card-foreground: #1c1410;
+  --card-foreground: #212529;
 
   /* Popover Surfaces */
   --popover: #ffffff;
-  --popover-foreground: #1c1410;
+  --popover-foreground: #212529;
 
-  /* Primary - Deep Maroon (IIT Jodhpur Identity) */
-  --primary: #7b2d3e;
+  /* Primary - IIT Jodhpur Rose-Maroon */
+  --primary: #903f54;
   --primary-foreground: #ffffff;
 
-  /* Secondary - Warm Sandstone */
-  --secondary: #f0e6d8;
-  --secondary-foreground: #1c1410;
+  /* Secondary - Light Gray */
+  --secondary: #f8f9fa;
+  --secondary-foreground: #212529;
 
-  /* Muted - Light Sand */
-  --muted: #f5ede2;
-  --muted-foreground: #5c4d42;
+  /* Muted - Subtle Gray */
+  --muted: #e9ecef;
+  --muted-foreground: #6c757d;
 
-  /* Accent - Thar Gold */
-  --accent: #c9a227;
-  --accent-foreground: #1c1410;
+  /* Accent - IIT Orange */
+  --accent: #b85200;
+  --accent-foreground: #ffffff;
 
   /* Destructive */
-  --destructive: #b44040;
+  --destructive: #dc3545;
 
   /* Border & Input */
-  --border: #e5ddd0;
-  --input: #e5ddd0;
-  --ring: #c9a227;
+  --border: #dee2e6;
+  --input: #dee2e6;
+  --ring: #903f54;
 
-  /* ===== Custom Theme Palette ===== */
-  /* Sandstone Tones */
-  --sandstone: #c4a77d;
-  --sandstone-light: #e8ded0;
-  --sandstone-dark: #a68b5b;
+  /* ===== Custom IIT Jodhpur Colors ===== */
+  /* IIT Brand Colors */
+  --iit-maroon: #903f54;
+  --iit-maroon-light: #a85568;
+  --iit-maroon-dark: #783446;
 
-  /* Gold Accents */
-  --gold: #c9a227;
-  --gold-light: #e0c05a;
-  --gold-dark: #9a7b1a;
+  /* IIT Orange */
+  --iit-orange: #b85200;
+  --iit-orange-light: #d66b1a;
+  --iit-orange-dark: #8f3f00;
 
-  /* Maroon (Primary Brand) */
-  --maroon: #7b2d3e;
-  --maroon-light: #9b4555;
-  --maroon-dark: #5a1f2d;
+  /* IIT Green */
+  --iit-green: #469b7c;
+  --iit-green-light: #5cb396;
+  --iit-green-dark: #357a60;
+
+  /* Indigo Accent */
+  --indigo: #6610f2;
+  --indigo-light: #8540f5;
+  --indigo-dark: #4e0cbe;
+
+  /* Gray Scale (Bootstrap) */
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  /* Legacy color names for compatibility */
+  --gold: #b85200;
+  --gold-light: #d66b1a;
+  --gold-dark: #8f3f00;
+
+  --maroon: #903f54;
+  --maroon-light: #a85568;
+  --maroon-dark: #783446;
+
+  --sandstone: #e9ecef;
+  --sandstone-light: #f8f9fa;
+  --sandstone-dark: #dee2e6;
 
   /* Umber (Dark Surfaces) */
   --umber: #2c1810;
@@ -222,13 +251,13 @@
 
   /* Selection Color */
   ::selection {
-    background-color: rgba(201, 162, 39, 0.3);
-    color: #1c1410;
+    background-color: rgba(184, 82, 0, 0.3);
+    color: #212529;
   }
 
   .dark ::selection {
-    background-color: rgba(201, 162, 39, 0.4);
-    color: #0f0a07;
+    background-color: rgba(184, 82, 0, 0.4);
+    color: #ffffff;
   }
 }
 
@@ -326,9 +355,9 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
       135deg,
-      #c9a227 0%,
-      #c4a77d 50%,
-      #7b2d3e 100%
+      #b85200 0%,
+      #903f54 50%,
+      #6610f2 100%
     );
   }
 
@@ -336,22 +365,22 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
       135deg,
-      #e0c05a 0%,
-      #c9a227 50%,
-      #9a7b1a 100%
+      #d66b1a 0%,
+      #b85200 50%,
+      #8f3f00 100%
     );
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(135deg, #2c1810 0%, #3d261c 50%, #2c1810 100%);
+    background: linear-gradient(135deg, #903f54 0%, #b85200 50%, #903f54 100%);
   }
 
   .bg-gradient-gold {
-    background: linear-gradient(135deg, #e0c05a 0%, #c9a227 50%, #9a7b1a 100%);
+    background: linear-gradient(135deg, #d66b1a 0%, #b85200 50%, #8f3f00 100%);
   }
 
   .bg-gradient-sandstone {
-    background: linear-gradient(180deg, #faf7f2 0%, #f0e6d8 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   }
 }
 
@@ -533,6 +562,6 @@
 @layer base {
   *:focus-visible {
     @apply outline-2 outline-offset-2;
-    outline-color: #c9a227;
+    outline-color: #903f54;
   }
 }

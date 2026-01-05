@@ -35,7 +35,7 @@ const facilities = [
       'Prototyping equipment',
       'Safety-certified labs',
     ],
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#6610f2] to-[#469b7c]',
   },
   {
     icon: Laptop,
@@ -49,7 +49,7 @@ const facilities = [
       'Meeting rooms',
       '24/7 access',
     ],
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#903f54] to-[#B85200]',
   },
   {
     icon: Building2,
@@ -63,7 +63,7 @@ const facilities = [
       'Networking opportunities',
       'Flexible lease terms',
     ],
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-[#B85200] to-[#d66b1a]',
   },
   {
     icon: Wrench,
@@ -77,7 +77,7 @@ const facilities = [
       'Mechanical tools',
       'Testing equipment',
     ],
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'from-[#469b7c] to-[#5cb396]',
   },
   {
     icon: Users,
@@ -91,7 +91,7 @@ const facilities = [
       'Video conferencing',
       'Catering services',
     ],
-    gradient: 'from-red-500 to-rose-500',
+    gradient: 'from-[#903f54] to-[#a85568]',
   },
   {
     icon: Briefcase,
@@ -105,7 +105,7 @@ const facilities = [
       'Dedicated utilities',
       'Scalable spaces',
     ],
-    gradient: 'from-indigo-500 to-violet-500',
+    gradient: 'from-[#6610f2] to-[#8540f5]',
   },
 ]
 
