@@ -30,7 +30,7 @@ const opportunities = [
     tagline: 'Launch and Scale Your Venture',
     description:
       'Comprehensive support for early-stage startups, from ideation to Series A and beyond.',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#903f54] to-[#B85200]',
     features: [
       'Seed funding up to ₹50 lakhs',
       'Subsidized office space',
@@ -56,7 +56,7 @@ const opportunities = [
     tagline: 'Establish Your Innovation Presence',
     description:
       "Set up dedicated R&D centers or innovation labs to leverage IIT Jodhpur's research capabilities.",
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#6610f2] to-[#469b7c]',
     features: [
       'Customizable R&D center spaces',
       'Collaboration with faculty',
@@ -82,7 +82,7 @@ const opportunities = [
     tagline: 'Commercialize Your Innovation',
     description:
       'Transform your research into market-ready products with comprehensive commercialization support.',
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-[#B85200] to-[#d66b1a]',
     features: [
       'Technology validation support',
       'IP protection assistance',
@@ -108,7 +108,7 @@ const opportunities = [
     tagline: 'Join Our Growing Team',
     description:
       'Be part of a dynamic team driving innovation and entrepreneurship in Rajasthan.',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'from-[#469b7c] to-[#5cb396]',
     features: [
       'Competitive compensation',
       'Career growth opportunities',

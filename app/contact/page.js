@@ -21,7 +21,7 @@ const contactInfo = [
     details: 'techpark@iitj.ac.in',
     subtitle: 'We typically respond within 24 hours',
     href: 'mailto:techpark@iitj.ac.in',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#6610f2] to-[#469b7c]',
   },
   {
     icon: Phone,
@@ -29,7 +29,7 @@ const contactInfo = [
     details: '+91 291 280 1234',
     subtitle: 'Mon-Fri, 9:00 AM - 6:00 PM',
     href: 'tel:+912912801234',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#903f54] to-[#B85200]',
   },
   {
     icon: MapPin,
@@ -37,14 +37,14 @@ const contactInfo = [
     details: 'IIT Jodhpur, NH 65, Karwad',
     subtitle: 'Jodhpur, Rajasthan 342030',
     href: 'https://maps.app.goo.gl/oG3Erm3TvQxEcxyeA',
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-[#B85200] to-[#d66b1a]',
   },
   {
     icon: Clock,
     title: 'Office Hours',
     details: 'Monday - Friday',
     subtitle: '9:00 AM - 6:00 PM IST',
-    gradient: 'from-green-500 to-emerald-500',
+    gradient: 'from-[#469b7c] to-[#5cb396]',
   },
 ]
 

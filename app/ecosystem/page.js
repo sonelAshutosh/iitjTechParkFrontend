@@ -25,7 +25,7 @@ const ecosystemPillars = [
     title: 'R&D Collaborations',
     description:
       'Foster cutting-edge research partnerships between industry and academia, driving innovation and technological advancement.',
-    gradient: 'from-blue-500 to-cyan-500',
+    gradient: 'from-[#6610f2] to-[#469b7c]',
     features: [
       'Access to IIT Jodhpur faculty expertise',
       'Joint research programs',
@@ -38,7 +38,7 @@ const ecosystemPillars = [
     title: 'Startups & Incubation',
     description:
       'Nurture early-stage startups with comprehensive support, from ideation to market launch and beyond.',
-    gradient: 'from-purple-500 to-pink-500',
+    gradient: 'from-[#903f54] to-[#B85200]',
     features: [
       'Seed funding opportunities',
       'Mentorship from industry experts',
@@ -51,7 +51,7 @@ const ecosystemPillars = [
     title: 'Industry Partners',
     description:
       'Connect leading corporations with innovation opportunities, research talent, and collaborative projects.',
-    gradient: 'from-amber-500 to-orange-500',
+    gradient: 'from-[#B85200] to-[#d66b1a]',
     features: [
       'Corporate R&D centers',
       'Technology transfer programs',
